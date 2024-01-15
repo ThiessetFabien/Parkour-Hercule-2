@@ -78,9 +78,18 @@ if (base.getHour() > 8 && base.getHour() < 20) {
 
 };
 
+// CREER UNE FONCTION POUR GENERER UN PSEUDO, 
+// QUI RECOIT 2 PARAMETRES (un prénom, un numéro de département)
+function generatePseudo (name, department) {
 
+    name = 'Toto';
+    department = 10;
+    let pseudo = `${name}-du-${department}`;
+    // ta fonction retourne le pseudo type Prénom-du-NuméroDeDépartement
+    return pseudo;
+};
 
-
+generatePseudo();
 
 
 
