@@ -48,6 +48,16 @@ titleContainer.textContent= 'Vous consultez le profil de Hercule';
 const headerBanner = document.getElementById('header-banner');
 headerBanner.appendChild(titleContainer);
 
+// AFFICHER TOUS LES TRAVAUX
+// la méthode "displayWork" (de l'objet base) affiche 1 travail à la fois
+// elle prend un paramètre
+
+// boucle qui itère de 0 à 11 
+for(let i =0; i < 11; i++){
+    // appeler à chaque fois displayWork
+    base.displayWork([i]);
+};
+
 
 
 
