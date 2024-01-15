@@ -1,0 +1,13 @@
+{
+  "name": "s02e08-parcours-hercule-2-le-retour-icheldan1986",
+  "version": "1.0.0",
+  "main": "exo.js",
+  "scripts": {
+    "lint": "eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+  "description": ""
+    "eslint": "^8.56.0"
+}
