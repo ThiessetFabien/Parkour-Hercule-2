@@ -32,3 +32,11 @@ const HerculeFriends = [
 // utiliser la méthode printFriends (dans base), attend un tableau en argument
 // exécute là, passe ton tableau 
 base.printFriends(HerculeFriends);
+
+// méthode pour afficher le meilleur ami (dans base)
+// exécute là, passe la première valeur de ton tableau
+base.setBestFriend(HerculeFriends[0]);
+
+
+
+// git commit -m "feed/"
