@@ -82,6 +82,7 @@ if (base.getHour() > 8 && base.getHour() < 20) {
 // QUI RECOIT 2 PARAMETRES (un prénom, un numéro de département)
 function generatePseudo (name, department) {
 
+    // execute ta fonction en lui passant le prénom hercule et son numéro de département (étape2)
     name = Hercule.name;
     department = Hercule.department;
     let pseudo = `${name}-du-${department}`;
@@ -92,6 +93,10 @@ function generatePseudo (name, department) {
 generatePseudo();
 console.log(generatePseudo())
 
+// Utilise la valeur récupéré de genenatePseudo
+// pour écrire le pseudo dans l'élément à l'id "profil-name"
+let pseudoContainer = document.getElementById('profil-name');
+pseudoContainer.textContent = generatePseudo();
 
 
 
