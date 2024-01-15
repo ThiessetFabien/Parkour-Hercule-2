@@ -117,17 +117,26 @@ function votePercentage() {
   // nb votes de chacun => propriété "vote" de l'objet "base"
   const valeurTotal = base.vote.hercule + base.vote.cesar;
   // la formule de calcule : valeurRelative / valeurTotale * 100
-  const votePercentageHercule = Math.round((base.vote.hercule / valeurTotal) * 100);
+  const votePercentageHercule = Math.round(
+    (base.vote.hercule / valeurTotal) * 100
+  );
   const votePercentageCesar = Math.round((base.vote.cesar / valeurTotal) * 100);
   // affiche tes calculs dans 2 éléments de classe "people__popularity"
 
   // présent pour Hercule dans l'élément à l'id #trends-hercule
-  let percentageContainerHercule = document.getElementsByClassName("people__popularity")[0];
+  let percentageContainerHercule =
+    document.getElementsByClassName("people__popularity")[0];
   percentageContainerHercule.textContent = `${votePercentageHercule}%`;
+
+  let percentageBarHercule = document.getElementsByClassName("people__bar")[0];
+  percentageBarHercule.style.height = `${votePercentageHercule}%`;
 
   // et pour César dans l'élément à l'id #trends-cesar
   let percentageContainerCesar = document.getElementsByClassName("people__popularity")[1];
   percentageContainerCesar.textContent = `${votePercentageCesar}%`;
+
+  let percentageBarCesar = document.getElementsByClassName("people__bar")[1];
+  percentageBarCesar.style.height = `${votePercentageCesar}%`;
 }
 
 votePercentage();
