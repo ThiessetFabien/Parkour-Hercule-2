@@ -99,16 +99,38 @@ togglerButton.addEventListener("click", function () {
   headerBanner.classList.toggle("banner--open");
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    //  à la soumission du formulaire à l'id "contact"
-    let contactForm = document.getElementById('contact')
+document.addEventListener("DOMContentLoaded", function () {
+  //  à la soumission du formulaire à l'id "contact"
+  let contactForm = document.getElementById("contact");
 
-    contactForm.addEventListener('submit', function (event) {
-        //  je ne veux pas que la page s'actualise
-        event.preventDefault();
-        alert("Hercule ne souhaite pas être dérangé");
-    });
-    // à la place, afficher une boîte de dialoque en alerte qui dit "Hercule ne souhaite pas être dérangé"
-})
+  contactForm.addEventListener("submit", function (event) {
+    //  je ne veux pas que la page s'actualise
+    event.preventDefault();
+    alert("Hercule ne souhaite pas être dérangé");
+  });
+  // à la place, afficher une boîte de dialoque en alerte qui dit "Hercule ne souhaite pas être dérangé"
+});
+
+// ALGO
+// on veut afficher le pourcentage de votes pour Hercule & César sur la droite
+function votePercentage() {
+  // nb votes de chacun => propriété "vote" de l'objet "base"
+  const valeurTotal = base.vote.hercule + base.vote.cesar;
+  // la formule de calcule : valeurRelative / valeurTotale * 100
+  const votePercentageHercule = Math.round((base.vote.hercule / valeurTotal) * 100);
+  const votePercentageCesar = Math.round((base.vote.cesar / valeurTotal) * 100);
+  // affiche tes calculs dans 2 éléments de classe "people__popularity"
+
+  // présent pour Hercule dans l'élément à l'id #trends-hercule
+  let percentageContainerHercule = document.getElementsByClassName("people__popularity")[0];
+  percentageContainerHercule.textContent = `${votePercentageHercule}%`;
+
+  // et pour César dans l'élément à l'id #trends-cesar
+  let percentageContainerCesar = document.getElementsByClassName("people__popularity")[1];
+  percentageContainerCesar.textContent = `${votePercentageCesar}%`;
+}
+
+votePercentage();
+// donner une largeur aux 2 éléments de classe "people__bar", si on utilise le pourcentage calculé comme largeur, ça devrait être chouette
 
 // git commit -m "feed/"
