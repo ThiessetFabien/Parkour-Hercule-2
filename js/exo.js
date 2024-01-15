@@ -37,6 +37,22 @@ base.printFriends(HerculeFriends);
 // exécute là, passe la première valeur de ton tableau
 base.setBestFriend(HerculeFriends[0]);
 
+// créer un titre dans ma page
+// balise h1
+const titleContainer = document.createElement('h1');
+// ajoute un classe "banner__title"
+titleContainer.classList.add('banner__title');
+// écris dedans "Vous consultez le profil de Hercule"
+titleContainer.textContent= 'Vous consultez le profil de Hercule';
+// insère la dans l'élement avec l'id "header-banner"
+const headerBanner = document.getElementById('header-banner');
+headerBanner.appendChild(titleContainer);
+
+
+
+
+
+
 
 
 // git commit -m "feed/"
