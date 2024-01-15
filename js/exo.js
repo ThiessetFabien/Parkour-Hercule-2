@@ -17,9 +17,9 @@ const app = {
     arm: 60.5,
     // inRelationship : Yes
     inRelationship: "Yes",
-    // crée un tableau qui contient les noms des 4 amis d'hercule
-    friends: ["Jupiter", "Junon", "Alcmène", "Déjanire"],
   },
+  // crée un tableau qui contient les noms des 4 amis d'hercule
+  friends: ["Jupiter", "Junon", "Alcmène", "Déjanire"],
   // créer un titre dans ma page
   // balise h1
   title: {
@@ -118,7 +118,7 @@ const app = {
   
     // donner une largeur aux 2 éléments de classe "people__bar", si on utilise le pourcentage calculé comme largeur, ça devrait être chouette
     let percentageBarHercule = document.getElementsByClassName("people__bar")[0];
-    percentageBarHercule.style.height = `${votePercentageHercule}%`;
+    percentageBarHercule.style.width = `${votePercentageHercule}%`;
   
     // et pour César dans l'élément à l'id #trends-cesar
   
@@ -127,7 +127,7 @@ const app = {
     percentageContainerCesar.textContent = `${votePercentageCesar}%`;
   
     let percentageBarCesar = document.getElementsByClassName("people__bar")[1];
-    percentageBarCesar.style.height = `${votePercentageCesar}%`;
+    percentageBarCesar.style.width = `${votePercentageCesar}%`;
   },
   // ALGO
   // on veut afficher le pourcentage de votes pour Hercule & César sur la droite
@@ -143,11 +143,11 @@ const app = {
   
     // utiliser la méthode printFriends (dans base), attend un tableau en argument
     // exécute là, passe ton tableau
-    base.printFriends(app.Hercule.friends);
+    base.printFriends(app.friends);
   
     // méthode pour afficher le meilleur ami (dans base)
     // exécute là, passe la première valeur de ton tableau
-    base.setBestFriend(app.Hercule.friends[0]);
+    base.setBestFriend(app.friends[0]);
   
     this.title.appendToHeaderBanner();
   },
