@@ -82,14 +82,15 @@ if (base.getHour() > 8 && base.getHour() < 20) {
 // QUI RECOIT 2 PARAMETRES (un prénom, un numéro de département)
 function generatePseudo (name, department) {
 
-    name = 'Toto';
-    department = 10;
+    name = Hercule.name;
+    department = Hercule.department;
     let pseudo = `${name}-du-${department}`;
     // ta fonction retourne le pseudo type Prénom-du-NuméroDeDépartement
     return pseudo;
 };
 
 generatePseudo();
+console.log(generatePseudo())
 
 
 
