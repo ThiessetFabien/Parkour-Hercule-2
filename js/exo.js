@@ -58,6 +58,29 @@ for(let i =0; i < 11; i++){
     base.displayWork([i]);
 };
 
+// AFFICHER LA DISPO D'HERCULE SUIVANT L'HEURE QU'IL EST
+
+// entre 8h & 20h
+// Utilise getHour (de base) pour connaître l'heure qu'il est
+let availabilityContainer = document.getElementById('availability');
+
+if (base.getHour() > 8 && base.getHour() < 20) {
+    // hercule est Disponible
+    // afficher l'information de disponibilité dans l'élement à l'id availability
+    availabilityContainer.classList.remove('off');
+    availabilityContainer.textContent = 'Disponible';
+
+} else {
+    // sinon Non disponible
+    // ajoutes y la class off lorsque Hercule est non disponible (pastille rouge)
+    availabilityContainer.classList.add('off');
+    availabilityContainer.textContent= 'Non disponible';
+
+};
+
+
+
+
 
 
 
