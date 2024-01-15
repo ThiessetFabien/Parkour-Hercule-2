@@ -19,3 +19,10 @@ const Hercule = {
 };
 
 base.fillProfil(Hercule);
+
+const HerculeFriends = [
+    'Jupiter',
+    'Junon',
+    'Alcmène',
+    'Déjanire',
+]
