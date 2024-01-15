@@ -1,3 +1,5 @@
+import { base } from "../js/base.js";
+
 console.log('test 1...2...1...2');
 
 // représenter l'entité Hercule
@@ -14,4 +16,6 @@ const Hercule = {
     arm: 60.5,
     // inRelationship : Yes
     inRelationship: 'Yes',
-}
+};
+
+base.fillProfil(Hercule);

@@ -2,7 +2,7 @@
  * @property {object} vote - The number of votes
  * @property {Array} activities - All the activities
  */
-const base = {
+export const base = {
   vote: {
     hercule: 120,
     cesar: 53,
