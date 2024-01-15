@@ -96,7 +96,7 @@ console.log(generatePseudo())
 // Utilise la valeur récupéré de genenatePseudo
 // pour écrire le pseudo dans l'élément à l'id "profil-name"
 let pseudoContainer = document.getElementById('profil-name');
-pseudoContainer.textContent = generatePseudo();
+pseudoContainer.textContent += ` (${generatePseudo()})`;
 
 
 
