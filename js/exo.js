@@ -18,11 +18,17 @@ const Hercule = {
     inRelationship: 'Yes',
 };
 
+//met en argument le profil d'hercule dans fillProfil
 base.fillProfil(Hercule);
 
+// crée un tableau qui contient les noms des 4 amis d'hercule
 const HerculeFriends = [
     'Jupiter',
     'Junon',
     'Alcmène',
     'Déjanire',
-]
+];
+
+// utiliser la méthode printFriends (dans base), attend un tableau en argument
+// exécute là, passe ton tableau 
+base.printFriends(HerculeFriends);
