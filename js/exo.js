@@ -98,6 +98,18 @@ console.log(generatePseudo())
 let pseudoContainer = document.getElementById('profil-name');
 pseudoContainer.textContent += ` (${generatePseudo()})`;
 
+// écoute l'évènement clock sur l'élément avec l'id "menu-toggler"
+const togglerButton = document.getElementById('menu-toggler');
+togglerButton.addEventListener('click', function () {
+    // tu dois l'ajouter ou la retirer sur l'élément à l'id "header-banner":
+    //      quand click et que "header-banner" a déjà la classe "banner--open" 
+    //      quand click et que "header-banner" n'a pas la classe "banner--open"
+    headerBanner.classList.toggle('banner--open');
+})
+
+
+
+
 
 
 
